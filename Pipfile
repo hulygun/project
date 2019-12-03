@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+jupyter = "*"
+grpcio-tools = "*"
+
+[packages]
+pydantic = "*"
+grpcio = "*"
+starlette = "*"
+uvicorn = "*"
+pyjwt = "*"
+pyyaml = "*"
+fastapi = "*"
+sphinx = "*"
+sphinx-bootstrap-theme = "*"
+pytest = "*"
+
+[requires]
+python_version = "3.8"

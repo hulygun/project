@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "version": 1.0,
+    "author": "hulygun <hulygun@gmail.com>",
+    "description": "_descroption"
+  },
+  "objects": [
+    {
+      "id": 1,
+      "name": "_model 1"
+    },
+    {
+      "id": 2,
+      "name": "_model 2"
+    },
+    {
+      "id": 3,
+      "name": "_model 3"
+    },
+    {
+      "id": 4,
+      "name": "_model 4"
+    },
+    {
+      "id": 5,
+      "name": "_model 5"
+    }
+  ]
+}
+

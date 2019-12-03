@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "_descroption"
+msgstr "_descroption"
+
+msgid "_meta"
+msgstr "_meta"
+
+msgid "_model 1"
+msgstr "_model 1"
+
+msgid "_model 2"
+msgstr "_model 2"
+
+msgid "_model 3"
+msgstr "_model 3"
+
+msgid "_model 4"
+msgstr "_model 4"
+
+msgid "_model 5"
+msgstr "_model 5"
+
+msgid "author"
+msgstr "author"
+
+msgid "description"
+msgstr "description"
+
+msgid "hulygun <hulygun@gmail.com>"
+msgstr "hulygun <hulygun@gmail.com>"
+
+msgid "id"
+msgstr "id"
+
+msgid "name"
+msgstr "name"
+
+msgid "objects"
+msgstr "objects"
+
+msgid "version"
+msgstr "version"

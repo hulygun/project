@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  book:
+    build: ./services/books
+    container_name: book
+    working_dir: /code
+    command: ./books/server.py
+    volumes:
+      - ./services/books:/code/books
+      - ./services/gw:/code/gw
+    ports:
+      - "50051:50051"
+
+  api:
+    build: ./services/api
+    container_name: api
+    working_dir: /code
+    command: uvicorn api.client:app --reload --host 0.0.0.0
+    volumes:
+      - ./services/api:/code/api
+      - ./services/gw:/code/gw
+    ports:
+      - "8000:8000"
+    links:
+      - book
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    volumes:
+      - ./cfg/nginx.conf:/etc/nginx/conf.d/service.conf
+      - ./index.html:/var/www/index.html
+      - ./services/docs/build/html:/var/www/docs:rw
+    ports:
+      - "80:80"
+    links:
+      - api

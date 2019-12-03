@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+APP_ROOT="$( dirname "$(dirname "${BASH_SOURCE[0]}")")"
+DOMAIN="book"
+
+for entry in "$APP_ROOT"/i18n/*
+do
+    if test ! -f "${entry}"; then
+        $(msgfmt -o ${entry}/LC_MESSAGES/${DOMAIN}.mo ${entry}/LC_MESSAGES/${DOMAIN}.po)
+    fi
+done

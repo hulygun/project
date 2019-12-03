@@ -1,0 +1,41 @@
+msgid "_descroption"
+msgstr ""
+
+msgid "_meta"
+msgstr ""
+
+msgid "_model 1"
+msgstr ""
+
+msgid "_model 2"
+msgstr ""
+
+msgid "_model 3"
+msgstr ""
+
+msgid "_model 4"
+msgstr ""
+
+msgid "_model 5"
+msgstr ""
+
+msgid "author"
+msgstr ""
+
+msgid "description"
+msgstr ""
+
+msgid "hulygun <hulygun@gmail.com>"
+msgstr ""
+
+msgid "id"
+msgstr ""
+
+msgid "name"
+msgstr ""
+
+msgid "objects"
+msgstr ""
+
+msgid "version"
+msgstr ""

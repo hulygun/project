@@ -1,0 +1,15 @@
+.pytest_cache
+_backup
+logs
+*.mo
+services/docs/build
+Pipfile.lock
+work.ipynb
+test.http
+*.pyc
+__pycache__
+.env
+*~
+.DS_Store
+.idea
+services/gw/*.py

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+APP_ROOT="$( dirname "$(dirname "${BASH_SOURCE[0]}")")"
+DOMAIN="book"
+
+for entry in "$APP_ROOT"/data/*
+do
+    join=''
+    if test -f "${APP_ROOT}/i18n/${DOMAIN}.pot"; then
+        join="-j"
+    fi
+    $(xgettext -a --keyword=_ ${join} -L C --no-location --omit-header -s -o ${APP_ROOT}/i18n/${DOMAIN}.pot $entry)
+done
+
+input="${APP_ROOT}/locale.gen"
+
+while IFS= read -r line
+do
+  lang="${line::11}"
+  if test -f "${APP_ROOT}/i18n/${lang::2}/LC_MESSAGES/${DOMAIN}.po"; then
+    $(msgmerge -U ${APP_ROOT}/i18n/${lang::2}/LC_MESSAGES/${DOMAIN}.po ${APP_ROOT}/i18n/${DOMAIN}.pot)
+  else
+    $(mkdir -p ${APP_ROOT}/i18n/${lang::2}/LC_MESSAGES/)
+    $(msginit -i ${APP_ROOT}/i18n/${DOMAIN}.pot --locale=${lang} --no-translator -o ${APP_ROOT}/i18n/${lang::2}/LC_MESSAGES/${DOMAIN}.po)
+  fi
+
+done < "$input"
